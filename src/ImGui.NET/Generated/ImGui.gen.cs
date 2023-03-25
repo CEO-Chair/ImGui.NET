@@ -13585,7 +13585,7 @@ namespace ImGuiNET
                 native_fmt[native_fmt_offset] = 0;
             }
             else { native_fmt = null; }
-            ImGuiNative.igText(native_fmt);
+            ImGuiNative.igTextUnformatted(native_fmt, native_fmt + fmt_byteCount);
             if (fmt_byteCount > Util.StackAllocationSizeLimit)
             {
                 Util.Free(native_fmt);
